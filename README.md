@@ -10,8 +10,51 @@
   
   ***开始使用***
   
-  ·
-  var marquee({
-  	container : "container",
-	content   : "content"
-  })
+    首先引入marquee.js
+    
+    html代码
+    `
+    	<table  id="container" cellspacing="0" cellspadding="0">
+		<tbody id="content">
+			<tr class="item"><td>1111111111111111111111111111111111</td></tr>
+			<tr class="item"><td>2222222222222222222222222222222222</td></tr>
+			<tr class="item"><td>3333333333333333333333333333333333</td></tr>
+			<tr class="item"><td>4444444444444444444444444444444444</td></tr>
+			<tr class="item"><td>5555555555555555555555555555555555</td></tr>
+			<tr class="item"><td>6666666666666666666666666666666666</td></tr>
+			<tr class="item"><td>7777777777777777777777777777777777</td></tr>
+			<tr class="item"><td>8888888888888888888888888888888888</td></tr>
+			<tr class="item"><td>9999999999999999999999999999999999</td></tr>
+			<tr class="item"><td>0000000000000000000000000000000000</td></tr>
+			<tr class="item"><td>1111111111111111111111111111111111</td></tr>
+		</tbody>
+	</table>
+    `
+    css 代码
+    `
+    	#container{
+		height:300px;
+		overflow:hidden;
+		position:relative;
+		display:block !important;
+	}
+	tr{
+		line-height:30px;
+	}
+
+	tbody{
+		border:0px;
+	}
+    `
+ 
+ `
+ var marquee = new Marquee({
+	container : "container",
+	content   : "content",
+	itemHeight: 30,
+	duration  : 1000,
+	sleep	  : 3000,
+	direction : "up"
+
+})
+  `
