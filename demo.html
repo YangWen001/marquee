@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	<style>
+		#container{
+			height:300px;
+			overflow:hidden;
+			position:relative;
+			display:block !important;
+		}
+		tr{
+			line-height:28px;
+		}
+		
+		tbody{
+			border:0px;
+		}
+	
+		#containerB{
+			width:400px;
+			background:yellow;
+			height:40px;
+			overflow:hidden;
+			position:relative;
+		}
+	
+		#contentB{
+			font-size:0px;
+			white-space:nowrap;
+		}
+		
+		#containerB .item{
+			width:200px;
+			font-size:14px;
+			line-height:40px;
+			display:inline-block;
+		}
+	
+	</style>
+</head>
+<body>
+    <div >
+		<table  id="container"  border="0" cellspacing="0">
+			<tbody id="content">
+			<tr class="item"><td>1111111111111111111111111111111111</td></tr>
+			<tr class="item"><td>2222222222222222222222222222222222</td></tr>
+			<tr class="item"><td>3333333333333333333333333333333333</td></tr>
+			<tr class="item"><td>4444444444444444444444444444444444</td></tr>
+			<tr class="item"><td>5555555555555555555555555555555555</td></tr>
+			<tr class="item"><td>6666666666666666666666666666666666</td></tr>
+			<tr class="item"><td>7777777777777777777777777777777777</td></tr>
+			<tr class="item"><td>8888888888888888888888888888888888</td></tr>
+			<tr class="item"><td>9999999999999999999999999999999999</td></tr>
+			<tr class="item"><td>0000000000000000000000000000000000</td></tr>
+			<tr class="item"><td>1111111111111111111111111111111111</td></tr>
+			
+			</tbody>
+		</table>
+	</div>
+	<button onclick="add()">add</button>
+	<button onclick="remove()">remove</button>
+	<br />
+	<br />
+	<br />
+	<div id="containerB">
+		<div id="contentB">
+			<div class="item">111111111111111</div>
+			<div class="item">222222222222222</div>
+			<div class="item">333333333333333</div>
+			<div class="item">444444444444444</div>
+			<div class="item">555555555555555</div>
+		</div>
+	</div>
+
+</body>
+<script src="marquee.js">
+</script>
+<script>
+	
+		var marquee = new Marquee({
+			container : "container",
+			content   : "content",
+			itemHeight: 30,
+			duration  : 1000,
+			sleep	  : 3000,
+			direction : "up"
+			
+		})
+		
+		marquee.start();
+		
+		
+	
+	function add(){
+		var content = document.querySelector("#content");
+		var tr = document.createElement("tr");
+		tr.innerHTML = "<td>*******************************************</td>";
+		tr.className = "item";
+		content.appendChild(tr);
+		marquee.update();
+	}
+	
+	function remove(){
+		var tr = document.querySelector(".item");
+		tr.remove();
+		marquee.update();
+	}
+	/////////////////////////////////////////
+	
+	var marquee2 = new Marquee({
+			container : "containerB",
+			content   : "contentB",
+			scrollNumber : 2,
+			itemHeight: 30,
+			itemWidth : 200,
+			duration  : 1000,
+			sleep	  : 3000,
+			direction : "right"
+			
+		})
+		
+		marquee2.start();
+
+</script>
+
+	
+</html>
