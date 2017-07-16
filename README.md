@@ -13,8 +13,8 @@
     首先引入marquee.js
     
     html代码
-    ```
-    	<table  id="container" cellspacing="0" cellspadding="0">
+```
+	<table  id="container" cellspacing="0" cellspadding="0">
 		<tbody id="content">
 			<tr class="item"><td>1111111111111111111111111111111111</td></tr>
 			<tr class="item"><td>2222222222222222222222222222222222</td></tr>
@@ -29,9 +29,9 @@
 			<tr class="item"><td>1111111111111111111111111111111111</td></tr>
 		</tbody>
 	</table>
-    ```
+```
     css 代码
-    ```
+```
     	#container{
 		height:300px;
 		overflow:hidden;
@@ -45,9 +45,9 @@
 	tbody{
 		border:0px;
 	}
-    ```
+```
  js 代码
- ```
+```
  var marquee = new Marquee({
 	container : "container",
 	content   : "content",
@@ -57,4 +57,4 @@
 	direction : "up"
 
 })
-  ```
+```
