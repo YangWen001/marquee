@@ -46,7 +46,7 @@
 		border:0px;
 	}
     ```
- 
+ js 代码
  ```
  var marquee = new Marquee({
 	container : "container",
